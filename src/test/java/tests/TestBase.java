@@ -5,10 +5,8 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 
 import drivers.BrowserstackMobileDriver;
-import drivers.MobileDriverConfig;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.BeforeEach;
 
