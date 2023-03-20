@@ -7,9 +7,11 @@ repositories {
     mavenCentral()
 }
 
-def slf4jVersion = "1.7.32"
+def slf4jVersion = "2.0.7"
 
-
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
 
 dependencies {
     testImplementation(
@@ -62,9 +64,17 @@ task android(type: Test) {
     }
 }
 
+task emulation(type: Test) {
+    useJUnitPlatform {
+        includeTags("emulation")
+    }
+}
+
 task ios(type: Test) {
     useJUnitPlatform {
         includeTags 'ios'
     }
+
+
 }
 
